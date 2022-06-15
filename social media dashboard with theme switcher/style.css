@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.light{
+    --BG: hsl(0, 0%, 100%);
+    --BG-Top-Pattern: hsl(225, 100%, 98%);
+    --Card-BG: hsl(227, 47%, 96%);
+    --subtext: hsl(228, 12%, 44%);--Header-text: hsl(230, 17%, 14%);
+    --toggler: unset;
+    --hover: #e0ddee;
+} 
+
+.dark{
+    --BG: hsl(230, 17%, 14%);
+    --BG-Top-Pattern: hsl(232, 19%, 15%);
+    --Card-BG: hsl(228, 28%, 20%);
+    --subtext: hsl(228, 34%, 66%);
+    --Header-text: hsl(0, 0%, 100%);
+    --hover: #3a3458;
+    --toggler: linear-gradient( to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--BG);
+    font-family: 'Inter', sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container1{
+    width: 80%;
+}
+
+header section:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.header-info .info-1{
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--Header-text);
+}
+
+.header-info .info-2{
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--subtext);
+}
+
+.header-toggler{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Header-text);
+}
+
+.toggler{
+    width: 45px;
+    min-width: 45px;
+    height: 24px;
+    margin-left: 10px;
+    background: hsl(230,22%, 74%);
+    border-radius: 20px;
+    cursor: pointer;  
+    background-image: var(--toggler); 
+}
+
+.toggler-circle{
+    margin: 2px 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--BG);
+    transition: 0.3s;
+}
+
+.up{
+    color: hsl(163, 72%, 41%);
+    font-size: 12px;
+    font-weight: 700;    
+}
+
+.down{
+    color: hsl(356, 69%, 56%);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+header section:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card{
+    padding: 25px 30px;
+    background-color: var(--Card-BG);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.padding-left{
+    padding-left: 0;
+}
+
+.padding-right{
+    padding-right: 0;
+}
+
+.header-1{
+    margin: 10px 0;
+    color: var(--subtext);
+    font-weight: 700;
+}
+
+.header-1-name{
+font-size: 13px;
+}
+
+.header-2{
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--Header-text);
+}
+
+.header-3{
+    color: var(--subtext);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.header-4{
+    margin-top: 30px;
+}
+
+.fb{
+    border-top: 3px solid hsl(208,92%, 53%);
+}
+
+.twtr{
+    border-top: 3px solid hsl(203,89%, 53%);
+}
+
+.insta{
+    position: relative;
+    overflow: hidden;
+}
+
+.insta::after{
+    content: "";
+    background-image: linear-gradient(to right, #fdc468, #df4996);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+}
+
+.yt{
+    border-top: 3px solid hsl(348, 97%, 39%);
+}
+
+.main-heading{
+   margin-top: 30px;
+   margin-bottom: 30px;
+   font-weight:700;
+   font-size: 32px;
+   color: var(--Header-text);
+}
+
+.main-card{
+    background: var(--Card-BG);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.main-row-margin{
+    margin-bottom: 25px;
+}
+
+.main-card-top,.main-card-bottom,.main-card-bottom1{
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+}
+
+.main-card-top span:first-child{
+    color: var(--subtext);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.main-card-top span:last-child{
+   padding-left: 40px;
+}
+
+.main-card-bottom span:first-child{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--Header-text);
+    padding-top: 25px;
+}
+
+.main-card-bottom1 span:first-child{
+    font-size: 24px;
+    font-weight: 700px;
+    color: var(--Header-text);
+    padding-top: 25px; 
+}
+
+/* .main-card-bottom span:last-child{
+    color: hsl(163,72%, 41%);
+    font-weight: 700;
+    font-size: 12px;
+    padding-top: 50px;
+}
+
+.main-card-bottom1 span:last-child{
+    color: hsl(356, 69%,56%);
+    font-weight:700; 
+    font-size: 12px;
+    padding-top: 50px;
+} */
+
+main{
+    display: flex;
+    flex-direction:column;
+    justify-content: left
+}
+
+.row{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+}
+
+.col-md-4{
+    width: 250px;
+    max-height: 150px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
